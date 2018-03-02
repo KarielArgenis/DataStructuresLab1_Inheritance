@@ -30,4 +30,13 @@ public class Arithmetic extends Progression {
 		return term;
 	}
 	
+	public boolean Equals(Progression p) {
+		double first = p.firstValue();
+		if (this.firstValue() == first 
+				&& this.commonDifference == (p.nextValue()-first)) {
+			return true;
+		}
+		return false;
+	}
+	
 }

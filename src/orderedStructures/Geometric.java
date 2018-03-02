@@ -29,4 +29,14 @@ public class Geometric extends Progression {
 		double term = this.firstValue()*Math.pow(commonFactor, n-1);
 		return term;
 	}
+	
+	public boolean Equals(Progression p) {
+			double first = p.firstValue();
+			if (this.firstValue() == first 
+					&& this.commonFactor == (first+p.nextValue())) {
+				return true;
+			}
+			return false;
+		}
+	
 }
