@@ -1,6 +1,8 @@
 package orderedStructures;
 
-public class Arithmetic extends Progression {
+import interfaces.Combinable;
+
+public class Arithmetic extends Progression implements Combinable{
 	private double commonDifference; 
 	
 	public Arithmetic(double firstValue, double commonDifference) { 
@@ -30,13 +32,18 @@ public class Arithmetic extends Progression {
 		return term;
 	}
 	
-	public boolean Equals(Progression p) {
+	@Override
+	public boolean equals(Progression p) {
 		double first = p.firstValue();
-		if (this.firstValue() == first 
-				&& this.commonDifference == (p.nextValue()-first)) {
+		if (this.firstValue()==first 
+				&& this.commonDifference==(p.nextValue()-first)) {
 			return true;
 		}
-		return false;
+		else return false;
+	}
+	
+	public Progression add(Progression p) {
+		
 	}
 	
 }

@@ -30,13 +30,14 @@ public class Geometric extends Progression {
 		return term;
 	}
 	
-	public boolean Equals(Progression p) {
+	@Override
+	public boolean equals(Progression p) {
 			double first = p.firstValue();
 			if (this.firstValue() == first 
-					&& this.commonFactor == (first+p.nextValue())) {
+					&& this.commonFactor == (p.nextValue()/first)) {
 				return true;
 			}
-			return false;
+			else return false;
 		}
 	
 }
