@@ -1,7 +1,5 @@
 package orderedStructures;
 
-import java.util.ArrayList;
-
 import interfaces.Combinable;
 
 public class Arithmetic extends Progression implements Combinable{

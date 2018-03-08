@@ -21,7 +21,7 @@ public class Geometric extends Progression {
 
 	@Override
 	public String toString() {
-		return "Arith("+ (int)this.firstValue() + "," + (int)commonFactor +")";
+		return "Geom("+ (int)this.firstValue() + "," + (int)commonFactor +")";
 	}
 	
 	@Override
