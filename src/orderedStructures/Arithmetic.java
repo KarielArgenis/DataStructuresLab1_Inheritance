@@ -45,7 +45,15 @@ public class Arithmetic extends Progression implements Combinable{
 	}
 	
 	public Progression add(Progression p) {
-	//can't figure it out
+		double pCommonDiff = -(p.firstValue() - p.nextValue());
+	 Progression result = new Arithmetic(this.firstValue()+p.firstValue(), this.commonDifference+pCommonDiff);
+	 return result;
 	}
 	
+
+	public Progression substract(Progression p) {
+		double pCommonDiff = -(p.firstValue() - p.nextValue());
+	 Progression result = new Arithmetic(this.firstValue()-p.firstValue(), this.commonDifference-pCommonDiff);
+	 return result;
+	}
 }
